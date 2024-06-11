@@ -1,0 +1,95 @@
+/* Reset box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Focus state for input elements (none) for better custom styles */
+:focus {
+  outline: none;
+}
+
+/* Body styling with a dark gradient background */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#1f1818, #666666, #35395e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Input field styling */
+.search-container {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
+}
+
+/* Label syling for input */
+.input-label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #333333;
+  padding: 3px 4px 1px 4px;
+  font-size: 11px;
+  color: #ffcc33;
+  border: 1px solid #ffcc33; /* Add border around the label */
+  border-radius: 4px; 
+}
+
+
+input::placeholder {
+  color: #aaa;
+}
+
+.search-container input,
+.search-container .suggestions {
+  width: 100%;
+}
+
+/* Suggestions container styling */
+.search-container .suggestions {
+  position: absolute;
+  border: 1px solid #165c7c;
+  background-color: #222;
+  border-radius: 2px 2px 4px 4px;
+  max-height: 200px;
+  overflow-y: auto; /* Clips content and adds scroll bar if content overflow container vertically */
+  z-index: 1000; /*Ensures the containter is above other elements on the page */
+  
+}
+
+/* Unordered list styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* List item styling */
+ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 1px solid #444;
+}
+
+/* Highlighted list item on hover */
+ul li:hover,
+ul li.highlight {
+  background-color: #555;
+}
+
+/* Input styling  */
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #165c7c;
+  border-radius: 4px;
+  background-color: #222;
+  color: #fff;
+}
